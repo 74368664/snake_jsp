@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>snake</title>
+    <link rel="stylesheet" type="text/css" href="../css/start_game.css">
+    <script src="../jsp/snake.js"></script>
+
+</head>
+<body>
+
+<div class="start_game_main" >
+    <div id="map" >
+        <div class="leaderboard_">
+            <p align="center" >排行榜</p>
+            <ol type="1">
+                <li>22</li>
+            </ol>
+        </div>
+
+        <div class="score_"></div>
+        <div class="start_temp_" ><h3 id="a1">开始游戏</h3> </div>
+        <!--    onmousedown="start_game()"-->
+    </div>
+</div>
+
+<script>
+
+    //开始游戏
+    function start_snake() {
+        // console.log("haha");
+
+        // console.log("4");
+        document.onkeypress=function (e) {
+
+            s_direction(e);
+
+            }
+            s_direction_xy();
+           moveSnake();
+
+
+            // }
+        }
+        var a1=document.getElementById('a1');
+        a1.onmousedown=function (){
+
+
+            var start_game_1=document.getElementsByClassName('start_temp_')[0];
+            start_game_1.parentNode.removeChild(start_game_1);
+            // console.log("1");
+            snake_deal_leight();
+            drawsnake();
+            setInterval(function(){
+                start_snake();
+            },time);
+
+        }
+
+
+</script>
+
+</body>
+</html>
