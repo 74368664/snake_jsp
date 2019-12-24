@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>snake</title>
     <link rel="stylesheet" type="text/css" href="../css/start_game.css">
+    <script src="../jsp/main.js"></script>
     <script src="../jsp/snake.js"></script>
-
+    <script src="../jsp/food.js"></script>
+    <script src="../jsp/deal_snake.js"></script>
 </head>
 <body>
 
@@ -18,7 +20,14 @@
             </ol>
         </div>
 
-        <div class="score_"></div>
+        <div class="score_" >
+            <br/>
+            分数：<div id="experience_div1"><div id="experience_div"><span id="snake_score">  0</span></div></div>
+             <br/>
+            <br/>
+            生命值：<div id="life_progress_div1"><div id="life_progress_div">
+                <span id="snake_life_value" style="font-size: 15px;line-height: 10px;" align="center">
+                100</span></div></div></div>
         <div class="start_temp_" ><h3 id="a1">开始游戏</h3> </div>
         <!--    onmousedown="start_game()"-->
     </div>
@@ -31,14 +40,21 @@
         // console.log("haha");
 
         // console.log("4");
+
         document.onkeypress=function (e) {
 
             s_direction(e);
 
             }
-            s_direction_xy();
-           moveSnake();
 
+            s_direction_xy();
+        deal_eat();
+        deal_accelerate();
+        deal_decelerate();
+        deal_bomb();
+        moveSnake();
+
+        game_over();
 
             // }
         }
@@ -51,6 +67,10 @@
             // console.log("1");
             snake_deal_leight();
             drawsnake();
+            food_position();
+            accelerate_position();
+            decelerate_position();
+            bomb_position();
             setInterval(function(){
                 start_snake();
             },time);

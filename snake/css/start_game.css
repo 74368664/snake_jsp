@@ -16,7 +16,7 @@
 /*地图*/
 #map{
     width: 900px;
-    height:500px;
+    height:520px;
     background-color: #adbdff;
     /*background-image:url("../img/bg/111.jpg");*/
     background-size: 100%;
@@ -39,17 +39,17 @@
     float: right;
     height: 100%;
     /*background-color:rgba(255,255,255,0.6);*/
-    opacity: 0.2;
+    opacity: 0.1;
 }
 /*分数*/
 .score_{
-    background-color: #6bfff5;
+    /*background-color: #6bfff5;*/
 
     width: 200px;
     float:left;
-    height: 70px;
+    height: 100px;
     /*background-color:rgba(255,255,255,0.6);*/
-    opacity: 0.3;
+    opacity: 30%;
 }
 .start_temp_{
     width:400px;
@@ -68,8 +68,8 @@
  }
 .snake_head{
     position: absolute;
-    width:14px;
-    height: 14px;
+    width:20px;
+    height: 20px;
     background-color: #b571e2;
     /*background-image: ;*/
 
@@ -77,9 +77,93 @@
 }
 .snake_body{
     position: absolute;
-    width:14px;
-    height: 14px;
+    width:20px;
+    height: 20px;
     background-color: #52e2cd;
     /*background-image: ;*/
    border-radius: 50%;
+}
+.food_{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    /*background-color: #e0e211;*/
+    background-image: url("../img/food/food.png");
+    background-size: 100%;
+}
+.accelerate{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    /*background-color: #e21a29;*/
+    background-image: url("../img/food/antidote.png");
+    background-size: 100%;
+}
+.decelerate{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    /*background-color: #0d0c0a;*/
+    background-image: url("../img/food/poison.png");
+    background-size: 100%;
+}
+.bomb{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    /*background-color: #0d0c0a;*/
+    background-image: url("../img/food/bomb.png");
+    background-size: 100%;
+}
+#life_progress_div1{
+width: 100px;
+    position: absolute;
+    height: 20px;
+    margin-top:-20px;
+    margin-left:60px;
+    background-color: #b2ff68;
+
+    border-radius: 20%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #130b0f;
+}
+#life_progress_div{
+    width: 100px;
+    position: absolute;
+    height: 20px;
+    margin-top:0px;
+    margin-left:0px;
+    background-color: #b2ff68;
+    background-image: url("../img/button/blood.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    border-radius: 20%;
+
+}
+#experience_div1{
+    width: 100px;
+    position: absolute;
+    height: 20px;
+    margin-top:-20px;
+    margin-left:60px;
+    background-color: #b2ff68;
+    border-radius: 20%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #130b0f;
+}
+#experience_div{
+    width: 0px;
+    position: absolute;
+    height: 20px;
+    margin-top:0px;
+    margin-left:0px;
+    background-color: #b2ff68;
+    background-image: url("../img/button/Experience.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    border-radius: 20%;
 }
