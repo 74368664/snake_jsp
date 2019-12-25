@@ -1,49 +1,67 @@
+<!-- 注册 -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-
-    <title>snake</title>
-    <link rel="stylesheet" type="text/css" href="../css/index_.css">
+    <meta charset="utf-8">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="../css/registered.css">
     <style>
-        .logo_index{
-            margin-left: 27%;
-
-        }
 
 
     </style>
-
 </head>
 <body>
-<div class="main" onmousedown="fn(event)" >
-<p  id="a">fdfdfdfdsfsdfdsfsdfds</p>
+<div id="re_main">
+    <form action="../index.html" method="get">
+        <table border="0" cellpadding="0" cellspacing="0" >
+            <caption style="font-size: 30px;">注册</caption>
+            <tr>
+                <td width="100"  style="text-align:right;">账户名:&nbsp;</td>
+                <td width="300"><input type="text"  name="name" id="accound_ " value="" size="40px" placeholder="请输入账户名"/></td></tr>
+            <tr>
+                <td >密码:&nbsp;</td>
+                <td ><input type="password" name="psword" id=" pass_" value="" size="40px" placeholder="请输入密码"/></td></tr>
+            <tr>
+                <td>验证密码:&nbsp;</td>
+                <td><input type="password" name="wpsword" id="repass_" value="" size="40px" placeholder="请重新输入密码"/></td></tr>
+            <tr>
+                <td >性别:&nbsp;</td>
+                <td style="text-align:left; color: silver;">
+                    &nbsp;&nbsp;&nbsp; <label for="f1" >
+                        <input type="radio" name="f1" id="girl" value="">女</input>
+                        <input type="radio" name="f1" id="boy" value="">男</input>
 
+                    </label></td></tr>
+            <tr><td >爱好:&nbsp;</td>
+                <td style="text-align: left; color: silver;">
+                    &nbsp;&nbsp;&nbsp; <label for="hobby"><input type="checkbox" name="hobby" id="" value="">看书
+                        <input type="checkbox" name="hobby" id="" value=""/>打游戏
+                        <input type="checkbox" name="hobby" id="" value=""/>动漫
+                    </label>
+                </td></tr>
+            <tr><td>职业:&nbsp;</td>
+                <td style="text-align:left; ">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<select >
+                        <option>学生</option>
+                        <option>在职</option>
+                        <option>自由职业者</option>
+                        <option>其他</option>
+                    </select>
+                </td>
+            <tr><td>头像:&nbsp;</td><td>
+                <input type="file" id="" value="" style="text-align: center;"></td></tr>
+            <tr><td>建议:&nbsp;</td>
+                <td>
+							<textarea cols="30"rows="7">
+						</textarea></td>
+            <tr><td></td></tr>
+
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" name="submit" id="" value="提交"  />
+                    &nbsp;&nbsp;<input type="reset" name="reset" id="" value="重置" />
+        </table>
+    </form>
 </div>
-<script>
-    let x = event.clientX;
-
-    let y = event.clientY;
-    function snake_leight(x,y) {
-
-
-    var snake=document.createElement('div');
-    snake.style.left=x+'px';
-    snake.style.top=y+'px';
-
-        var map=document.getElementsByClassName('main');
-        map.append
-    }
-    var node=document.getElementsByClassName('a');
-
-    function fn(event) {
-
-
-
-        // document.write(x+"   "+y);
-       console.log(x+"   "+y);
-        node .innerHTML=x+"   "+y;
-    }
-</script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     var  down=2;
     var  left=3;
     var   right=4;
-    var  time=200;
+
     var size=20;
  var x=200;
 
@@ -37,7 +37,7 @@ function coord(x,y) {
                 this.dir = left;break;
             case 'd':
                 this.dir = right;break;
-            case 'p':alert("");break;
+
         }
     }
 

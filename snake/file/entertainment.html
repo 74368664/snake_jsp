@@ -1,37 +1,36 @@
 
-<!--
-游戏页面
-主游戏页面
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>snake</title>
     <link rel="stylesheet" type="text/css" href="../css/start_game.css">
+
     <script src="../jsp/g_info.js"></script>
     <script src="../jsp/jquery-3.4.1.js"></script>
     <script src="../jsp/main.js"></script>
     <script src="../jsp/snake.js"></script>
     <script src="../jsp/food.js"></script>
     <script src="../jsp/deal_snake.js"></script>
-    <script src="../jsp/mode/normal.js"></script>
+    <script src="../jsp/mode/amusement.js"></script>
     <script>
 
     </script>
+    <style>
+
+    </style>
 </head>
 <body>
 
 <div class="start_game_main" >
-<!--    地图底层/-->
+    <!--    地图底层/-->
     <div id="map_b">
     </div>
     <!--    更换背景层/-->
-   <div id="map_a">
-   </div>
-<!--    游戏信息显示层-->
-   <div id="map"  >
+    <div id="map_a">
+    </div>
+    <!--    游戏信息显示层-->
+    <div id="map"  >
 
         <div class="leaderboard_">
             <p align="center" >排行榜</p>
@@ -43,19 +42,19 @@
         <div class="score_" >
             <br/>
             分数：<div id="experience_div1"><div id="experience_div"><span id="snake_score">  0</span></div></div>
-             <br/>
+            <br/>
             <br/>
             生命值：<div id="life_progress_div1"><div id="life_progress_div">
                 <span id="snake_life_value" style="font-size: 15px;line-height: 10px;" align="center">
                 100</span></div></div></div>
 
         <!--    onmousedown="start_game()"-->
-       <div class="check_topic"><h1 id="check_put" align="center">关卡1</h1></div>
-       <div class="start_temp_" id="a1"  style=""   onclick="fun1()"><img src="../img/button/start.png" width="150px" height="50px"> </div>
+
+        <div class="start_temp_" id="a1"  style=""   onclick="fun2()"><img src="../img/button/start.png" width="150px" height="50px"> </div>
 
 
+    </div>
 </div>
-   </div>
 
 <script>
 

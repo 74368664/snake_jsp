@@ -1,6 +1,6 @@
 .start_game_main{
      background-color: aqua;
-     background-image:url("../img/bg/bg7.jpg");
+     background-image:url("../img/bg/4.jpg");
      background-size: cover;
      width: 100%;
      height: 100%;
@@ -17,20 +17,54 @@
 #map{
     width: 900px;
     height:520px;
-    background-color: #adbdff;
-    /*background-image:url("../img/bg/111.jpg");*/
+    /*background-color: #adbdff;*/
+
+    z-index: 7;
     background-size: 100%;
-    margin-top: 70px;
-    margin-left:200px;
+
+    /*margin-top: 70px;*/
+    /*margin-left:200px;*/
  position: absolute;
+    /*border-width: 5px;*/
+    /*border-style: solid;*/
+    /*border-color: silver;*/
+    margin-top: 65px;
+    margin-left:205px;
+
+}
+#map_b{
+    width: 900px;
+    height:520px;
+    background-color: #adbdff;
+    /*background-image:url("../img/bg/7.jpg");*/
+    background-image:url("../img/bg/7.jpg");
+    background-size: 100%;
+    margin-top: 65px;
+    margin-left:205px;
+    z-index: 6;
+     opacity: 0.5;
+     position: absolute;
+
+
+}
+#map_a{
+    width: 900px;
+    height:520px;
+    background-color: #98fff0;
+    /*background-image:url("../img/bg/7.jpg");*/
+    background-size: 100%;
+    margin-top: 60px;
+    margin-left:200px;
+    position: absolute;
     border-width: 5px;
     border-style: solid;
     border-color: silver;
+    z-index: 5;
 
 }
 /*排行榜*/
 .leaderboard_{
-    background-color: #6bfff5;
+    /*background-color: #6bfff5;*/
 
     border-width:2px;
     border-style: solid;
@@ -59,9 +93,10 @@
     /*background-color: #f94c1b;*/
 
      color: #1c1c55;
-     margin-top: 100px;
-    margin-left:300px;
+     margin-top: 200px;
+    margin-left:370px;
      font-size:70px;
+    z-index: 20;
      /*border-color: #6bfff5;*/
      /*border-width: 3px;*/
 
@@ -79,9 +114,11 @@
     position: absolute;
     width:20px;
     height: 20px;
-    background-color: #52e2cd;
+    background-image: url("../img/snake/snake_body1.png");
+    background-size: cover;
+    /*background-color: #52e2cd;*/
     /*background-image: ;*/
-   border-radius: 50%;
+   /*border-radius: 50%;*/
 }
 .food_{
     position: absolute;
@@ -115,13 +152,21 @@
     background-image: url("../img/food/bomb.png");
     background-size: 100%;
 }
+.ting{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    /*background-color: #0d0c0a;*/
+    background-image: url("../img/button/timg.png");
+    background-size: 100%;
+}
 #life_progress_div1{
 width: 100px;
     position: absolute;
     height: 20px;
     margin-top:-20px;
     margin-left:60px;
-    background-color: #b2ff68;
+    background-color: #ff6f32;
 
     border-radius: 20%;
     border-width: 2px;
@@ -135,7 +180,8 @@ width: 100px;
     margin-top:0px;
     margin-left:0px;
     background-color: #b2ff68;
-    background-image: url("../img/button/blood.png");
+    background-image: url("../img/button/Experience.gif");
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -160,10 +206,26 @@ width: 100px;
     height: 20px;
     margin-top:0px;
     margin-left:0px;
-    background-color: #b2ff68;
-    background-image: url("../img/button/Experience.gif");
+    background-color: #c472ff;
+    background-image: url("../img/button/blood.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left;
+    background-color: #b2ff68;    background-position: left;
     border-radius: 20%;
+}
+.over{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+
+}
+.check_topic{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-top:0px;
+    margin-left: 350px;
+    letter-spacing: 10px;
+    /*background-color: #3529bd;*/
+    opacity: 0.3;
 }

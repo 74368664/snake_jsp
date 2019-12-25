@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>snake</title>
+    <link rel="stylesheet" type="text/css" href="../css/index_.css">
+    <style>
+        .logo_index{
+            margin-left: 27%;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="main" onmousedown="fn(event)" >
+    <p  id="a">fdfdfdfdsfsdfdsfsdfds</p>
+
+</div>
+<script>
+    let x = event.clientX;
+
+    let y = event.clientY;
+    function snake_leight(x,y) {
+
+
+        var snake=document.createElement('div');
+        snake.style.left=x+'px';
+        snake.style.top=y+'px';
+
+        var map=document.getElementsByClassName('main');
+        map.append
+    }
+    var node=document.getElementsByClassName('a');
+
+    function fn(event) {
+
+
+
+        // document.write(x+"   "+y);
+        console.log(x+"   "+y);
+        node .innerHTML=x+"   "+y;
+    }
+</script>
+</body>
+</html>
