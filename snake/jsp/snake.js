@@ -65,11 +65,15 @@ function snake_deal_leight() {
 
     // console.log("2");
     //
+     var RETemp=[0,0];
+    snake_leight[0]= new coord(this.x,this.y);
+    console.log(0+"  "+snake_leight[0].x+"  "+snake_leight[0].y);
+    for (var i = 1; i < S_lenght; i++) {
 
-    for (var i = 0; i < this.S_lenght; i++) {
+        snake_leight[i]= new coord(this.x,this.y);
+        coord.x-=size;
+        snake_leight[i].x= snake_leight[0].x-size*i;//
 
-        this.snake_leight[i]= new coord(this.x,this.y);
-        this.coord.x-= size;//
 
         // drawmap(this.snake_leight[i].x,this.snake_leight[i].y,'snake_body');
     }
@@ -80,10 +84,10 @@ function snake_deal_leight() {
 
 function drawsnake(){
 
-    drawmap(this.snake_leight[0].x,this.snake_leight[0].y,'snake_head');
+    drawmap(snake_leight[0].x,snake_leight[0].y,'snake_head');
     for (var i = 1; i < this.S_lenght; i++) {
 
-        drawmap(this.snake_leight[i].x,this.snake_leight[i].y,'snake_body');
+        drawmap(snake_leight[i].x,snake_leight[i].y,'snake_body');
     }
 
 }
@@ -99,12 +103,14 @@ function moveSnake(){
         snake_leight[i]=snake_leight[i-1];
 
         removeEvent(snake_leight[i].x, snake_leight[i].y);
+
         drawmap(snake_leight[i].x, snake_leight[i].y, 'snake_body');
+
     }
 
     snake_leight[0]=s_direction_xy();
     // console.log(s_direction_xy());
-    // console.log("0"+" "+snake_leight[0].y+" "+snake_leight[0].x);
+
     removeEvent(RETemp[0], RETemp[1]);
     // console.log("delete"+" "+RETemp[0]+" "+RETemp[1]);
 

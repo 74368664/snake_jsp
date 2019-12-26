@@ -8,7 +8,7 @@ var  temp_ting=0;
     while (temp_ting!=1){
 //
         ting_x=Math.floor(Math.random()*32+4);
-        ting_y=Math.floor(Math.random()*25+1);
+        ting_y=Math.floor(Math.random()*20+1);
         // for ( var k=0;k<=snake_leight;k++){
         //     if (ting_x != snake_leight[k].x||ting_y !=snake_leight[k].y ) {
 
@@ -57,18 +57,19 @@ function start_snake1() {
     document.onkeypress=function (e) {
         s_direction(e);
     }
-    s_direction_xy();
-    deal_eat();         //吃食物页面
+    s_direction_xy();  //蛇行动坐标
+    snake_eatfood() ;       //吃食物页面
     if(food_add==1){
-    for(var i=0;i<3;i++) {
+
         ting_position();
-    }
+
         food_add=0;
     }
     deal_accelerate();//加速解压篇判断
     deal_decelerate();//减速毒药判断
     deal_ting();
     deal_bomb();
+    snake_died();
     moveSnake();
     game_over();
     // var start_pause1=document.getElementsByClassName('over');
@@ -77,7 +78,7 @@ function start_snake1() {
 var a1=document.getElementById('a1');
 
 function fun2(){
-
+    judge_pause=2;
 
     var start_game_1=document.getElementsByClassName('start_temp_')[0];
     start_game_1.parentNode.removeChild(start_game_1);
@@ -91,9 +92,9 @@ function fun2(){
     accelerate_position();
     decelerate_position();
     bomb_position();
-    for(var i=0;i<3;i++) {
+    snake_died();
         ting_position();
-    }
+
     time_s=setInterval(function(){
         start_snake1();
     },time);

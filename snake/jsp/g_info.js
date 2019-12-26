@@ -1,3 +1,9 @@
+var count=0;
+var f_count=0;
+var time_s;
+var t=60;  //倒计时时间
+var snake_died_judge=0;
+var judge=true;
 var S_lenght=3;
 var score=0;
 var life_value=100;

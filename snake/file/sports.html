@@ -12,21 +12,23 @@
     <script src="../jsp/snake.js"></script>
     <script src="../jsp/food.js"></script>
     <script src="../jsp/deal_snake.js"></script>
-    <script src="../jsp/mode/amusement.js"></script>
+    <script src="../jsp/mode/sports.js"></script>
     <script>
 
     </script>
     <style>
-#map_b{
-    background-image: url("../img/bg/bg3.png");
-}
+        #map_b{
+            background-image: url("../img/bg/8 .png");
+        }
         .start_game_main{
-            background-image: url("../img/bg/bg7.jpg");
+            background-image: url("../img/bg/3.jpg");
 
         }
-       #check_put{
-           opacity: 0;
-       }
+        .check_topic{
+            opacity: 0.5;
+            width: 400px;
+            margin-left: 260px;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +60,7 @@
                 100</span></div></div></div>
 
         <!--    onmousedown="start_game()"-->
-        <div class="check_topic"><h1 id="check_put" align="center"></h1></div>
+        <div class="check_topic"><h1 id="check_put" align="center">时间还剩：<span id="time1">60</span>秒</h1></div>
         <div class="start_temp_" id="a1"  style=""   onclick="fun2()"><img src="../img/button/start.png" width="150px" height="50px"> </div>
 
 
