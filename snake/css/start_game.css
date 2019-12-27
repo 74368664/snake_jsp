@@ -38,7 +38,7 @@
     background-color: #adbdff;
     /*background-image:url("../img/bg/7.jpg");*/
     background-image:url("../img/bg/7.jpg");
-    background-size: 100%;
+    background-size: cover;
     margin-top: 65px;
     margin-left:205px;
     z-index: 6;
@@ -66,9 +66,9 @@
 .leaderboard_{
     /*background-color: #6bfff5;*/
 
-    border-width:2px;
-    border-style: solid;
-    border-color:#6bfff5;
+    /*border-width:2px;*/
+    /*border-style: solid;*/
+    /*border-color:#6bfff5;*/
     width:200px;
     float: right;
     height: 100%;
@@ -87,14 +87,15 @@
 }
 .start_temp_{
     width:400px;
-
+    position: absolute;
     height:200px;
 
     /*background-color: #f94c1b;*/
 
      color: #1c1c55;
-     margin-top: 200px;
-    margin-left:370px;
+    margin-top:300px;
+    margin-left:570px;
+    z-index:500 ;
      font-size:70px;
     z-index: 20;
      /*border-color: #6bfff5;*/
@@ -105,7 +106,9 @@
     position: absolute;
     width:20px;
     height: 20px;
-    background-color: #b571e2;
+    /*background-color: #b571e2;*/
+    background-image: url("../img/snake/head_1.png");
+    background-size: cover;
     /*background-image: ;*/
 
 
@@ -214,9 +217,21 @@ width: 100px;
     border-radius: 20%;
 }
 .over{
-    width: 300px;
-    height: 200px;
+    width: 90px;
+    height: 70px;
     position: absolute;
+    /*background-color: #5b6aff;*/
+    background-image: url("../img/button/jixu.png");
+    background-size: cover;
+
+}
+.stop{
+    width: 90px;
+    height: 70px;
+    position: absolute;
+    /*background-color: #5b6aff;*/
+    background-image: url("../img/button/stop.png");
+    background-size: cover;
 
 }
 .check_topic{

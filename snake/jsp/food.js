@@ -55,15 +55,18 @@ function bomb_position() {
     bomb_y=Math.floor(Math.random()*25+1);
     // for ( var k=0;k<=snake_leight;k++){
     // if (ting_x != snake_leight[k].x ||ting_y !=snake_leight[k].y ) {
-    for ( var k=0;k<snake_leight;k++) {
+    for (var j = 0; j <S_lenght; j++) {
+    if (bomb_x != snake_leight[j].x||bomb_y !=snake_leight[j].y ) {
+
+
         // if (bomb_x  != snake_leight[k].x ||bomb_y!=snake_leight[k].y ) {
         if (bomb_x != food.x || bomb_y != food.y) {
             //accelerate(accelerate_x, accelerate_y);
             // decelerate_leight[0]= new decelerate(decelerate_x, decelerate_y);
             //console.log(decelerate_leight[0]);
             drawmap(bomb_x * 20, bomb_y * 20, 'bomb');
-            // }}
+            }}
         }
 
-    }
+
 }

@@ -15,9 +15,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -43,6 +43,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code_progream\jsp\snake\file" />
+      <recent name="D:\code_progream\jsp\snake" />
       <recent name="D:\code_progream\jsp\snake\jsp\mode" />
       <recent name="D:\code_progream\jsp\snake\jsp" />
     </key>
@@ -88,7 +90,8 @@
       <workItem from="1577182409374" duration="172000" />
       <workItem from="1577182600647" duration="16994000" />
       <workItem from="1577232424185" duration="54843000" />
-      <workItem from="1577318322092" duration="4732000" />
+      <workItem from="1577318322092" duration="46612000" />
+      <workItem from="1577403525929" duration="10617000" />
     </task>
     <servers />
   </component>
@@ -96,6 +99,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="517" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577371208153">
+      <screen x="0" y="0" width="1366" height="737" />
+    </state>
+    <state x="517" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.737@0.0.1366.737" timestamp="1577371208153" />
     <state width="1306" height="179" key="GridCell.Tab.0.bottom" timestamp="1577203100990">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
@@ -152,6 +159,10 @@
       <screen x="0" y="0" width="1366" height="737" />
     </state>
     <state x="234" y="104" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.737@0.0.1366.737" timestamp="1577187251382" />
+    <state x="0" y="0" width="734" height="737" key="find.popup" timestamp="1577409790450">
+      <screen x="0" y="0" width="1366" height="737" />
+    </state>
+    <state x="0" y="0" width="734" height="737" key="find.popup/0.0.1366.737@0.0.1366.737" timestamp="1577409790450" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

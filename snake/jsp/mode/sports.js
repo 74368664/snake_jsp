@@ -4,41 +4,10 @@ var  temp_ting=0;
 
 var time_down;//倒计时
 function ting_position() {
-//     judge_pause=2;
-//     temp_ting=0;
-//
-//     while (temp_ting!=1){
-// //
-//
-//         for (var j = 0; j <= 20; j++) {
-//             ting_x=100;
-//               ting_y=Math.floor(Math.random()*20+1);
-//                 ting_leight[j] = new ting_(ting_x, ting_x);
-//
-//                 drawmap(ting_leight[ting_cont].x * 20, ting_leight[ting_cont].y * 20, 'ting');
-//                 ting_cont += 1;
-//                 temp_ting = 1;
-//                 break;
-//             }
-//         }
-    
+
 
 }
 function deal_ting() {
-    // for(var i=0;i<ting_cont;i++)
-    //     if (ting_leight[i].x*20==snake_leight[0].x &&
-    //         ting_leight[i].y*20==snake_leight[0].y) {
-    //         console.log(ting_cont+" "+ting_leight[ting_cont]);
-    //         life_value = 0;
-    //         // console.log("2");
-    //         life_progress(life_value);
-    //         document.getElementById('snake_life_value').innerHTML="   "+life_value;
-    //         game_over_page();
-    //
-    //
-    //         // removeEvent(ting_x*20,ting_y*20);
-    //
-    //     }
 
 }
 function start_snake2() {
@@ -54,7 +23,6 @@ function start_snake2() {
     snake_eatfood() ;       //吃食物页面
     if(food_add==1){
 
-        // food_position();
 
         food_add=0;
     }
@@ -68,8 +36,36 @@ function start_snake2() {
     // var start_pause1=document.getElementsByClassName('over');
     // start_pause1.onclick=start_pause();
 }
-var a1=document.getElementById('a1');
 
+ var time_s=setInterval(function(){
+    sport_s();
+},time);
+function sport_s() {
+    if(start_a==5){
+    var a1=document.getElementById('sports_a1');
+    a1.onclick=function () {
+start_a=0;
+console.log(start_a);
+    }
+    }
+    if(start_a==0){
+        fun2();
+        start_a=1;
+    }
+    if(start_a==1){
+        start_snake2();
+        var map=document.getElementById('map');
+        map.onclick=function (){
+            start_a=2;
+        }
+
+    }
+    if(start_a==2){
+        game_pause();
+        map.onclick=function (){
+        }
+    }
+}
 function fun2(){
     t=60;
 
@@ -78,10 +74,10 @@ function fun2(){
         put_time();
     },1000);
     judge_pause=3;
-
+console.log("aa");
     var start_game_1=document.getElementsByClassName('start_temp_')[0];
     start_game_1.parentNode.removeChild(start_game_1);
-
+    console.log("11");
     snake_deal_leight();
 
     drawsnake();
@@ -92,10 +88,9 @@ function fun2(){
     snake_died();
     ting_position();
 
-    time_s=setInterval(function(){
-        start_snake2();
-    },time);
+
 }
+
 function put_time() {
 
     var d = new Date();

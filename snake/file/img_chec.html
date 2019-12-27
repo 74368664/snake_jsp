@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img</title>
+    <link rel="stylesheet" type="text/css" href="../css/img_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/rule.css">
+    <script src="../jsp/g_info.js"></script>
+
+    <style>
+        body{
+            /*margin:0;*/
+            /*padding: 0;*/
+        }
+    </style>
+</head>
+<body>
+<div id="img_main">
+    <div id="person"><h1 style="color: white"><br>选<br>择<br>地<br>图</h1></div>
+
+    <div id="img_left"><img src="../img/button/left.png"  id="left_img1" onclick="left_fun()"></div>
+
+    <div id="img_right"><img src="../img/button/right.png" id="right_img1" onclick="right_fun()"></div>
+    <div id="img_put"></div>
+<!--    <img src="../img/bg/bg7.jpg" onclick="right_fun()"> -->
+        <div id="img_bottom" align="center"><img src="../img/button/yes.png" width="170"height="50" onclick="play_enter()" ></div>
+
+</div>
+<iframe src="../file/music.html" style="width: 100px;height: 100px; border-width: 0px; position: absolute;left: 0;top:0px;"></iframe>
+
+<script>
+
+
+    function  play_enter() {
+
+        window.location = "../file/entertainment.html?img_count="+img_count;
+    }
+    function left_fun(){
+
+        if (img_count >=1) {
+
+
+            if(img_count ==1) {
+            }
+            else {
+                img_count -= 1;
+            }
+            put_background();
+        }
+
+
+    }
+    function right_fun() {
+
+        if(img_count<5){
+            img_count+=1;
+
+            put_background();
+        }
+    }
+function put_background() {
+    var put_img=document.getElementById('img_put');
+
+    if(img_count==1){
+
+        put_img.style.backgroundImage="url('../img/bg/bg3.png')";
+    }
+    else if (img_count==2){
+        put_img.style.backgroundImage="url('../img/bg/111.jpg')";
+    }
+    else if (img_count==3){
+        put_img.style.backgroundImage="url('../img/bg/9.jpg')";
+    }
+    else if (img_count==4){
+        put_img.style.backgroundImage="url('../img/bg/11.jpg')";
+    }
+    else if (img_count==5){
+        put_img.style.backgroundImage="url('../img/bg/7.jpg')";
+    }
+    else {
+        put_img.style.backgroundImage="url('../img/bg/bg3.jpg')";
+    }
+}
+
+</script>
+</body>
+</html>

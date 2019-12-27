@@ -7,22 +7,30 @@
     <link rel="stylesheet" type="text/css" href="css/index_.css">
     <style>
         .logo_index{
-           margin-left: 27%;
+           margin-left: 30%;
 
        }
 
 
     </style>
 
-</head>
-<body>
+<!--    <embed src="bgm/en_kana.mp3" autostart=true hidden="true" loop=true></embed>-->
+
+    <!--    <embed src="../bgm/bgm.mp3" hidden="true" autostart="true" loop="true">-->
+</head >
+<body >
+<!--onload="bgm_()"-->
+<!--<audio src="..\\bgm\\bgm.mp3" controls="controls" width="30px"></audio>-->
+
+
 <div class="main">
 
     <div class="index_accound" >
-
     </div>
+
     <div class="index_login">
-        <table id="" action="">
+        <form id="log_" action="file/start.html">
+        <table id="" >
             <tr><td  style="height: 50px">账户：</td><td><input  type="text" id="name" value=""placeholder="请输入用户名" size="30" ></td></tr>
             <tr><td> 密码：</td><td><input  type="password" id="pass" value=""placeholder="请输入密码" size="30"></td></tr>
       <tr><td> &nbsp;&nbsp;&nbsp;</td><td></td></tr>
@@ -30,8 +38,19 @@
            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
           <a href="file/accound.html"> <img src="img/button/log_in.png" height="30px" width="70px" /></a>  </td></tr>
         </table>
+        </form>
     </div>
-    <img src="img/button/logo3.png" class="logo_index" height="500px" width="600px">
+    <img src="img/button/logo3.png" class="logo_index" height="500px" width="600px" >
+    <iframe src="file/music.html" style="width: 100px;height: 100px; border-width: 0px; position: absolute;left: 0;top:0px;"></iframe>
+
+
+
+
+
+
 </div>
+<script>
+
+</script>
 </body>
 </html>

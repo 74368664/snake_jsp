@@ -4,10 +4,11 @@ function life_progress(life_value) {  //生命值进度条
     progress.style.width=life_value+'px';
 
 }
-function score_progress(score) {  //分数进度条
-    console.log("3");
+//分数进度条
+function score_progress(score) {
+
     var progress=document.getElementById('experience_div');
-    var srcoe_judge1=0;
+    var srcoe_judge1=0;  //判断分数的进度长度选择
         if(score%50==0){
             this.srcoe_judg1e=1;
 
@@ -48,7 +49,7 @@ if(score%50==0&&score!=0){
     if(time>50){
     time-=20;
     }
-
+    lever();
     alert("恭喜你过关了");
 }
         var add_Temp=new Array(2);
@@ -135,7 +136,7 @@ function deal_bomb() {
             life_progress(life_value);
             document.getElementById('snake_life_value').innerHTML="   "+life_value;
         if(judge_pause==1||judge_pause==2) {
-            console.log( judge_pause);
+
             game_over_page();
         }
         else if(judge_pause==3){
@@ -146,11 +147,14 @@ function deal_bomb() {
         }
 
     }
+
+    //重新开始的三个页面跳转
 function judge_pause_a() {
     if(judge_pause==1){
         start_snake();
     }
     else if(judge_pause==2){
+        fun_map();
         start_snake1();
     }
     else if(judge_pause==3){
@@ -160,48 +164,90 @@ function judge_pause_a() {
 }
 function game_pause() {
 
+   // judge=confirm("是否继续游戏");
+   // if(judge==true){
+   //     time_s=setInterval(function(){
+   //         judge_pause_a();  //页面跳转选择
+  //          removeEvent(260,150);
+  //      },time);
+if(p_count==1) {
+
+    console.log(p_count);
     clearInterval(time_s);
-    drawmap(260,150,'over');
+    drawmap(260, 170, 'over');
+   drawmap(500, 170, 'stop');
+    p_count=2;
+}
+if(p_count==2){
 
-    judge=confirm("是否继续游戏");
-    if(judge==true){
+    var over=document.getElementsByClassName('over')[0];
+
+    over.onclick=function () {
+
+
         time_s=setInterval(function(){
-            judge_pause_a();
-            removeEvent(260,150);
-        },time);
-
-
+            judge_pause_a();  },time); //页面跳转选择
+        removeEvent(260,170);
+        removeEvent(500,170);
+        p_count=1;
+        start_a=1;
     }
-    else{
+    var stop=document.getElementsByClassName('stop')[0];
 
+    stop.onclick=function () {
         game_over_page();
+        time_s=setInterval(function(){
+            judge_pause_a();  },time); //页面跳转选择
+        removeEvent(500,170);
+        removeEvent(260,170);
+        p_count=1;
+        start_a=0;
+    }
     }
 
 }
-function start_pause() {
+
+    // else{
+    //
+    //     game_over_page(); //游戏结束
+    // }
 
 
-    removeEvent(260,150);
-    time_s=setInterval(function(){
-        start_snake();
-    },time);
-
-
-}
+// function start_pause() {
+//
+//     removeEvent(260,150);
+//     time_s=setInterval(function(){
+//         start_snake();
+//     },time);
+//
+//
+// }
+//蛇吃到自己
 function snake_died() {
-    // console.log(snake_leight[0].x+" "+snake_leight[0].y);
     if(snake_died_judge==1){
         snake_died_judge=0;
     }
     else {
   for ( var k=1;k<S_lenght;k++){
-      // console.log(snake_leight[k].x+" "+snake_leight[k].y);
+
      if (snake_leight[0].x== snake_leight[k].x&&snake_leight[0].y== snake_leight[k].y ) {
          game_over_page();
      }
   }
      }
 }
+function lever() {
 
+    var map_bgm=document.getElementById('map_b');
+    var pass_level=score/50+1;
+
+if(pass_level%2==0){
+
+    map_bgm.style.backgroundImage="url('../img/bg/1.jpg')";
+}
+else{
+    map_bgm.style.backgroundImage="url('../img/bg/7.jpg')";
+}
+}
 //开始游戏
 

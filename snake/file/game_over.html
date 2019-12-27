@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>snake</title>
+    <link rel="stylesheet" type="text/css" href="../css/start_game.css">
+
+
+    <script src="../jsp/main.js"></script>
+
+    <script>
+
+    </script>
+    <style>
+        #map_b{
+            background-image: url("../img/bg/bg3.png");
+            opacity: 0;
+        }
+        #map_a{
+            /*background-image: url("../img/bg/bg3.png");*/
+            opacity: 0;
+
+        }
+
+        #check_put{
+            opacity: 0;
+        }
+        .start_game_main{
+            background-image: url("../img/bg/over.png");
+
+              /*background-color: transparent;*/
+          }
+        #bottom{
+            background-color: white;
+            opacity: 0.5;
+            color: #010101;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+ border-style: solid;
+            border-color: #dafff5;
+            border-width: 3px;
+            margin-top: 500px;
+        }
+        #put_score{
+        //    background-color: #5b6aff;
+            opacity:0.6;
+            color: #ffffff;
+            width: 200px;
+            height: 200px;
+           float: right;
+            /*border-style: solid;*/
+            /*border-color: #dafff5;*/
+            /*border-width: 3px;*/
+            /*margin-top: 500px;*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="start_game_main" >
+<div id="put_score"><h1>分数：<span id="grade_">0</span></h1></div>
+    <div id="bottom" align="center"><h1><span id="again_game" onclick="again_()">重新开始</span>
+        &nbsp; &nbsp;  &nbsp;  &nbsp;          <span id="mode_chec" onclick="mode_page()">模式界面</span>
+        <span id="return_main_page" onclick="">主界面</span> </h1></div>
+</div>
+
+<script>
+    onload=function () {
+    var s=location.search;
+    var b=s.split("?");     //另一种查找方式
+    var grade=b[2].replace(/[^0-9]/ig,""); //用替换，消除s前面的非数字
+        var grade_=document.getElementById('grade_');
+        grade_.innerHTML=grade;
+}
+
+</script>
+
+</body>
+</html>

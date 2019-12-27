@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rule</title>
+    <link rel="stylesheet" type="text/css" href="../css/rule.css">
+    <script>
+var r_count=0;
+    </script>
+</head>
+<body >
+<div id="rule_main">
+    <div id="person"></div>
+    <div id="rule_info">
+        <h1 align="center" id="rule_i">'w'向上 's'向下 'a'向左 'd'向右  <br> <br>点击屏幕暂停</h1>
+        <span align="right" style="float: right;margin-right: 200px; color: #ff0700;margin-top:-20px" id="next_" onclick="next_rule()">下一步</span>
+    </div>
+</div>
+<iframe src="../file/music.html" style="width: 100px;height: 100px; border-width: 0px; position: absolute;left: 0;top:0px;"></iframe>
+
+</body>
+</html>
+<script>
+function next_rule() {
+    var next_r = document.getElementById('next_r');
+    var rule_=document.getElementById('rule_i');
+    r_count+=1;
+    if(r_count==1){
+    rule_.innerHTML="游戏中会有多种食物，请注意一些食物有着特殊的功能";
+    }
+    else if(r_count==2){
+        rule_.innerHTML="绿色的瓶子的是毒药，会减速，并且会掉血"+'<br/>'+"请注意：血量为0，游戏结束";
+    }
+    else if(r_count==3){
+        rule_.innerHTML="红色的瓶子的是解药，会增加血量"+'<br/>'+"但请注意：迟到解药会加速";
+    }
+    else if(r_count==4){
+        rule_.innerHTML="吃到炸弹游戏结束 ^__^";
+    }
+    else if(r_count==5){
+        rule_.innerHTML="吃到龙珠，分数增加！！！";
+    }
+    else if(r_count==6){
+        rule_.innerHTML="请开始游戏！";
+    }
+    else {
+
+        window.location = "../file/Checkpoint.html";
+    }
+
+}
+
+</script>

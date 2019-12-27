@@ -1,0 +1,37 @@
+#rule_main{
+    width: 1370px;
+    height: 650px;;
+    background-color: #ebf0ff;
+    position: fixed;
+   /*background-image:url("../img/bg/4.jpg");*/
+    background-size: cover;
+    margin-left: 0;
+}
+#person{
+    width: 300px;
+    height: 500px;
+    /*background-color: #fff6a8;*/
+    background-image: url("../img/bg/lishan.png");
+    background-size: cover;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 140px;
+}
+#rule_info{
+
+    width: 99%;
+    height: 200px;
+    background-color: #c6c9ff;
+    background-position: center;
+    position: absolute;
+    margin-top: 435px;
+    opacity: 0.5;
+    border-style: solid;
+    border-image: url("../img/bg/111.jpg");
+    border-image-slice: 30;
+    border-image-repeat: repeat;
+}
+body{
+    margin:0px;
+    padding:0px;
+}

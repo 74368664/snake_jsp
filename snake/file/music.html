@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var audio=new Audio('../bgm/bgm.mp3');
+        var aa=1;
+        function  bgm_(){
+
+
+            audio.play();
+            audio.loop=true;
+        }
+        function  music_() {
+
+            if (aa == 1) {
+                audio.pause();
+                aa = 0;
+            } else if (aa == 0) {
+                audio.play();
+                aa = 1;
+            }
+        }
+    </script>
+    <style>
+        #stop_music{
+            width: 70px;
+            height: 70px;
+            border-width: 0;
+            background-color: #98fff0;
+            background-image:url("../img/button/666.jpg");
+            background-size: cover;
+            border-radius: 50%;
+            animation: mymove 20s  infinite;
+        }
+        @-webkit-keyframes mymove {
+            50% {transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body onload="bgm_()">
+<div id="stop_music" onclick="music_()"></div>
+</body>
+<script>
+
+
+
+
+
+
+</script>
+</html>

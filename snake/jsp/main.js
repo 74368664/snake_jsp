@@ -20,49 +20,71 @@ function removeEvent(x,y){
 
 function game_over() {
     if(this.snake_leight[0].x<0||this.snake_leight[0].x>880||this.snake_leight[0].y<0||this.snake_leight[0].y>500) {
-        if(judge_pause==1||judge_pause==2) {
 
-            game_over_page();
-        }
-        else if(judge_pause=3){
-            game_over_page1();
-        }
+        game_over_page();
+
     }
 }
 function game_over_page() {
-    judge=confirm("游戏结束，你失败了!" +"  是否重新开始游戏");
-    console.log( "hh"+judge_pause);
-    if(judge==true){
-        if (judge_pause==1){
+    //  this.judge_pause=judge_pause;
+    // console.log(this.judge_pause);
+    // window.open("../file/game_over.html?judge_pause",'_self',?judge_pause);
+    window.location = "../file/game_over.html?judge_pause="+judge_pause+"?score="+score;
+}
+function game_over_page1() {
+    window.location = "../file/game_over.html?judge_pause="+judge_pause;
+
+}
+function again_() {
+    //console.log(location.search);
+    var s=location.search;
+    var j=s.indexOf("judge_pause");   //截取模式的判断
+    var   j_value=s.substr(j+12,1);
+    var b=s.split("?");     //另一种查找方式
+    var grade=b[2].replace(/[^0-9]/ig,""); //用替换，消除s前面的非数字
+    console.log(grade);
+    if (j_value == 1) {
         window.location = "../file/start_game.html";
-        }
-        if (judge_pause==2){
-            window.location = "../file/entertainment.html";
-        }
-        if (judge_pause==3){
-            window.location = "../file/sports.html";
-        }
     }
-    else{
-        judge_pause=0;
-        window.location = "../file/Checkpoint.html";
+    if (j_value== 2) {
+        window.location = "../file/img_chec.html";
+    }
+    if (j_value == 3) {
+        window.location = "../file/sports.html";
     }
 
 }
-function game_over_page1() {
-    console.log("ss");
-    var judge1=true;
-    this.judge1=judge1;
-    this.judge1=confirm("游戏结束,你的分数是"+score+",是否重新开始游戏？");
+function mode_page() {
 
-    if(this.judge1==true){
-        console.log(this.judge1);
- clearInterval(time_put);
-            window.location = "../file/sports.html";
+    judge_pause=0;
+    window.location = "../file/Checkpoint.html";
 
+}
+function img_change() {
+    var m=location.search;
+    img_map=m.replace(/[^0-9]/ig,""); //用替换，消除s前面的非数字
+
+    fun_map();
+
+}
+function fun_map() {
+    var put_img=document.getElementById('map_b');
+    if(img_map==1){
+        put_img.style.backgroundImage="url('../img/bg/bg3.png')";
     }
-    else{
-        window.location = "../file/Checkpoint.html";
+    else if (img_map==2){
+        put_img.style.backgroundImage="url('../img/bg/111.jpg')";
     }
-
+    else if (img_map==3){
+        put_img.style.backgroundImage="url('../img/bg/9.jpg')";
+    }
+    else if (img_map==4){
+        put_img.style.backgroundImage="url('../img/bg/11.jpg')";
+    }
+    else if (img_map==5){
+        put_img.style.backgroundImage="url('../img/bg/7.jpg')";
+    }
+    else {
+        put_img.style.backgroundImage="url('../img/bg/bg3.jpg')";
+    }
 }

@@ -6,10 +6,10 @@
     var   right=4;
 
     var size=20;
- var x=200;
+    var x=200; //蛇的x初始值
 
-    var y=200;
-     var dir=right;
+    var y=200; //蛇的y初始值
+     var dir=right;  //蛇的初始方向
 
 function coord(x,y) {
     this.x=x;
@@ -17,11 +17,6 @@ function coord(x,y) {
 
 
 }
-
-
-
-
-
 
 
     function s_direction(e){
@@ -67,7 +62,7 @@ function snake_deal_leight() {
     //
      var RETemp=[0,0];
     snake_leight[0]= new coord(this.x,this.y);
-    console.log(0+"  "+snake_leight[0].x+"  "+snake_leight[0].y);
+
     for (var i = 1; i < S_lenght; i++) {
 
         snake_leight[i]= new coord(this.x,this.y);
@@ -94,7 +89,7 @@ function drawsnake(){
 
 //蛇的移动
 function moveSnake(){
- var RETemp=[0,0];
+ var RETemp=[0,0];  //临时替换
  RETemp[0]=snake_leight[this.S_lenght-1].x;
     RETemp[1]=snake_leight[this.S_lenght-1].y;
 

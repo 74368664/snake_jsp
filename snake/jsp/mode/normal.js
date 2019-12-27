@@ -12,16 +12,14 @@ function start_snake() {
     deal_eat();         //吃食物页面
     deal_accelerate();//加速解压篇判断
     deal_decelerate();//减速毒药判断
-    console.log("a");
+
     snake_died();
     deal_bomb();
     moveSnake();
     game_over();
-    // var start_pause1=document.getElementsByClassName('over');
-    // start_pause1.onclick=start_pause();
+
 }
 var a1=document.getElementById('a1');
-
 function fun1(){
     judge_pause=1;
 
