@@ -8,9 +8,25 @@
 
 
     <script src="../jsp/main.js"></script>
-
     <script>
+        var audio=new Audio('../bgm/failure.mp3');
 
+        function  bgm_1(){
+
+
+            audio.play();
+            audio.loop=true;
+        }
+        // function  music_() {
+        //
+        //     if (aa == 1) {
+        //         audio.pause();
+        //         aa = 0;
+        //     } else if (aa == 0) {
+        //         audio.play();
+        //         aa = 1;
+        //     }
+        // }
     </script>
     <style>
         #map_b{
@@ -57,17 +73,18 @@
         }
     </style>
 </head>
-<body>
+<body >
 
 <div class="start_game_main" >
 <div id="put_score"><h1>分数：<span id="grade_">0</span></h1></div>
     <div id="bottom" align="center"><h1><span id="again_game" onclick="again_()">重新开始</span>
-        &nbsp; &nbsp;  &nbsp;  &nbsp;          <span id="mode_chec" onclick="mode_page()">模式界面</span>
-        <span id="return_main_page" onclick="">主界面</span> </h1></div>
+        &nbsp; &nbsp;  &nbsp;  &nbsp;          <span id="mode_chec" onclick="mode_page()">模式界面</span></h1>
+<!--        <span id="return_main_page" onclick="">主界面</span> </h1></div>-->
 </div>
 
 <script>
     onload=function () {
+       bgm_1();
     var s=location.search;
     var b=s.split("?");     //另一种查找方式
     var grade=b[2].replace(/[^0-9]/ig,""); //用替换，消除s前面的非数字

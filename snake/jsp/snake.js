@@ -1,15 +1,8 @@
 
 
-    var  up=1;
-    var  down=2;
-    var  left=3;
-    var   right=4;
+var x=200; //蛇的x初始值
 
-    var size=20;
-    var x=200; //蛇的x初始值
-
-    var y=200; //蛇的y初始值
-     var dir=right;  //蛇的初始方向
+var y=200; //蛇的y初始值
 
 function coord(x,y) {
     this.x=x;
@@ -24,19 +17,21 @@ function coord(x,y) {
         // console.log("5");
 
         switch (e.key) {
+            case 'W':
             case 'w':
                 this.dir = up;break;
+            case 'S':
             case 's':
                 this.dir = down;break;
+            case 'A':
             case 'a':
                 this.dir = left;break;
+            case 'D':
             case 'd':
                 this.dir = right;break;
 
         }
     }
-
-
     function s_direction_xy()
     {
         var x=snake_leight[0].x;
@@ -46,7 +41,6 @@ function coord(x,y) {
             case down:y+=size;break;
             case  left:x-=size;break;
             case right:x+=size;break;
-
           //清除间歇调用暂停
         }
         //  this.coord.x=x1;
@@ -57,9 +51,6 @@ function coord(x,y) {
     }
 
 function snake_deal_leight() {
-
-    // console.log("2");
-    //
      var RETemp=[0,0];
     snake_leight[0]= new coord(this.x,this.y);
 
@@ -69,19 +60,12 @@ function snake_deal_leight() {
         coord.x-=size;
         snake_leight[i].x= snake_leight[0].x-size*i;//
 
-
-        // drawmap(this.snake_leight[i].x,this.snake_leight[i].y,'snake_body');
     }
-   // this.coord.x=this.snake_leight[0].x;
-   //  this.coord.y=this.snake_leight[0].y;
-
 }
 
 function drawsnake(){
-
     drawmap(snake_leight[0].x,snake_leight[0].y,'snake_head');
     for (var i = 1; i < this.S_lenght; i++) {
-
         drawmap(snake_leight[i].x,snake_leight[i].y,'snake_body');
     }
 

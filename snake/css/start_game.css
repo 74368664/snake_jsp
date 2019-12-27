@@ -103,25 +103,40 @@
 
  }
 .snake_head{
-    position: absolute;
-    width:20px;
-    height: 20px;
-    /*background-color: #b571e2;*/
-    background-image: url("../img/snake/head_1.png");
-    background-size: cover;
-    /*background-image: ;*/
+     position: absolute;
+     width:20px;
+     height: 20px;
+     /*background-color: #b571e2;*/
+     background-image: url("../img/snake/head_1.png");
+     background-size: cover;
+     /*background-image: ;*/
 
 
-}
+ }
 .snake_body{
     position: absolute;
     width:20px;
     height: 20px;
     background-image: url("../img/snake/snake_body1.png");
     background-size: cover;
-    /*background-color: #52e2cd;*/
+}
+.t_head{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    /*background-color: #b571e2;*/
+    background-image: url("../img/snake/head_mai.png");
+    background-size: cover;
     /*background-image: ;*/
-   /*border-radius: 50%;*/
+
+
+}
+.t_body{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    background-image: url("../img/snake/t_body.png");
+    background-size: cover;
 }
 .food_{
     position: absolute;

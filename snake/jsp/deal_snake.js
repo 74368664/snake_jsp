@@ -30,11 +30,7 @@ function score_progress(score) {
 
 }
 function deal_eat() {
-    // console.log(this.snake_leight[0].x+"  "+this.snake_leight[0].y);
-    // console.log(this.food_leight[0].x+"  "+this.food_leight[0].y);
-
     if (food_leight[0].x*20==snake_leight[0].x&&food_leight[0].y*20==snake_leight[0].y){
-
         S_lenght+=1;
         score=score+10;
         snake_died_judge=1;
@@ -51,6 +47,8 @@ if(score%50==0&&score!=0){
     }
     lever();
     alert("恭喜你过关了");
+
+
 }
         var add_Temp=new Array(2);
         add_Temp[0]=(food_leight[0].x)*20;
@@ -60,27 +58,30 @@ if(score%50==0&&score!=0){
         snake_leight[S_lenght-1].y= add_Temp[1];
 
         food_position();
-        // removeEvent(accelerate_x*20,accelerate_y*20);
+
     }
 
 }
 function snake_eatfood() {
-
+    // console.log("aa");
+    // console.log(food_leight[0].x*20,food_leight[0].y*20);
+    // console.log(snake_leight[0].x,snake_leight[0].x);
     if (food_leight[0].x*20==snake_leight[0].x&&food_leight[0].y*20==snake_leight[0].y){
 
         S_lenght+=1;
         score=score+10;
         snake_died_judge=1;
-        score_progress(score/10);
-
         document.getElementById('snake_score').innerHTML="  "+score;
+if( twn_decide!=5){
 
+    score_progress(score/10);
         if(score%50==0&&score!=0){
-                check_info=score/50+1;
-                if(time>50){
-                    time-=20;
-                }
+            check_info=score/50+1;
+            if(time>50){
+                time-=20;
+            }
         }
+}
         var add_Temp=new Array(2);
         add_Temp[0]=(food_leight[0].x)*20;
         add_Temp[1]=(food_leight[0].y)*20;
@@ -89,6 +90,24 @@ function snake_eatfood() {
         snake_leight[S_lenght-1].y= add_Temp[1];
         food_position();
         // removeEvent(accelerate_x*20,accelerate_y*20);
+    }
+
+
+}
+function t_eat_food() {
+
+    if (food_leight[0].x*20==tsnake_leight[0].x1&&food_leight[0].y*20==tsnake_leight[0].y1){
+        t_lenght+=1;
+        t_score=t_score+10;
+
+        document.getElementById('t_score').innerHTML="  "+t_score;
+        var add_Temp=new Array(2);
+        add_Temp[0]=(food_leight[0].x)*20;
+        add_Temp[1]=(food_leight[0].y)*20;
+        tsnake_leight.push(add_Temp);
+        tsnake_leight[t_lenght-1].x1=add_Temp[0];
+        tsnake_leight[t_lenght-1].y1= add_Temp[1];
+        food_position();
     }
 }
 function deal_accelerate() {
@@ -121,7 +140,6 @@ else if(judge_pause==3){
     game_over_page1();
 }
         }
-
         removeEvent(decelerate_leight[0].x*20,decelerate_leight[0].y*20);
         decelerate_position();
     }
@@ -160,31 +178,23 @@ function judge_pause_a() {
     else if(judge_pause==3){
         start_snake2();
     }
+    else if(judge_pause==5){
+        start_snake3();
+    }
+
 
 }
+//暂停处理
 function game_pause() {
-
-   // judge=confirm("是否继续游戏");
-   // if(judge==true){
-   //     time_s=setInterval(function(){
-   //         judge_pause_a();  //页面跳转选择
-  //          removeEvent(260,150);
-  //      },time);
 if(p_count==1) {
-
-    console.log(p_count);
-    clearInterval(time_s);
+    clearInterval(time_s);   //清除定时器
     drawmap(260, 170, 'over');
    drawmap(500, 170, 'stop');
     p_count=2;
 }
 if(p_count==2){
-
     var over=document.getElementsByClassName('over')[0];
-
     over.onclick=function () {
-
-
         time_s=setInterval(function(){
             judge_pause_a();  },time); //页面跳转选择
         removeEvent(260,170);
@@ -193,9 +203,14 @@ if(p_count==2){
         start_a=1;
     }
     var stop=document.getElementsByClassName('stop')[0];
-
     stop.onclick=function () {
+
+        if(judge_pause==5){
+            game_over_page2();
+        }
+        else{
         game_over_page();
+        }
         time_s=setInterval(function(){
             judge_pause_a();  },time); //页面跳转选择
         removeEvent(500,170);
@@ -207,21 +222,6 @@ if(p_count==2){
 
 }
 
-    // else{
-    //
-    //     game_over_page(); //游戏结束
-    // }
-
-
-// function start_pause() {
-//
-//     removeEvent(260,150);
-//     time_s=setInterval(function(){
-//         start_snake();
-//     },time);
-//
-//
-// }
 //蛇吃到自己
 function snake_died() {
     if(snake_died_judge==1){
@@ -230,19 +230,24 @@ function snake_died() {
     else {
   for ( var k=1;k<S_lenght;k++){
 
-     if (snake_leight[0].x== snake_leight[k].x&&snake_leight[0].y== snake_leight[k].y ) {
+     if(snake_leight[0].x== snake_leight[k].x&&snake_leight[0].y== snake_leight[k].y ) {
          game_over_page();
      }
-  }
+      }
      }
+    if(twn_decide==5){
+        for ( var k=1;k<t_lenght;k++) {
+            if (tsnake_leight[0].x == tsnake_leight[k].x && tsnake_leight[0].y == tsnake_leight[k].y) {
+                game_over_page();
+            }
+        }
+    }
 }
-function lever() {
 
+function lever() {
     var map_bgm=document.getElementById('map_b');
     var pass_level=score/50+1;
-
 if(pass_level%2==0){
-
     map_bgm.style.backgroundImage="url('../img/bg/1.jpg')";
 }
 else{
@@ -250,4 +255,7 @@ else{
 }
 }
 //开始游戏
-
+function victory() {
+    if (snake_leight[0].x == tsnake_leight[0].x && tsnake_leight[0].y == tsnake_leight[0].y){
+        }
+}

@@ -15,7 +15,7 @@ function start_snake() {
 
     snake_died();
     deal_bomb();
-    moveSnake();
+    moveSnake();  //移动
     game_over();
 
 }

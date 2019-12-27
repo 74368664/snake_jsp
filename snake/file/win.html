@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>snake</title>
+    <link rel="stylesheet" type="text/css" href="../css/start_game.css">
+
+
+    <script src="../jsp/main.js"></script>
+    <script>
+        var audio=new Audio('../bgm/happy_man.mp3');
+
+        function  bgm_1(){
+
+
+            audio.play();
+            audio.loop=true;
+        }
+        // function  music_() {
+        //
+        //     if (aa == 1) {
+        //         audio.pause();
+        //         aa = 0;
+        //     } else if (aa == 0) {
+        //         audio.play();
+        //         aa = 1;
+        //     }
+        // }
+    </script>
+    <style>
+        #map_b{
+            background-image: url("../img/bg/bg3.png");
+            opacity: 0;
+        }
+        #map_a{
+            /*background-image: url("../img/bg/bg3.png");*/
+            opacity: 0;
+
+        }
+
+        #check_put{
+            opacity: 0;
+        }
+        .start_game_main{
+            background-image: url("../img/bg/win.jpeg");
+background-size: cover;
+            /*background-color: transparent;*/
+        }
+        #bottom{
+            background-color: white;
+            opacity: 0.5;
+            color: #010101;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            border-style: solid;
+            border-color: #dafff5;
+            border-width: 3px;
+            margin-top: 360px;
+        }
+        #put_score{
+        //    background-color: #5b6aff;
+            opacity:0.6;
+            color: #020205;
+            width: 200px;
+            height: 200px;
+            float: right;
+            /*border-style: solid;*/
+            /*border-color: #dafff5;*/
+            /*border-width: 3px;*/
+            /*margin-top: 500px;*/
+        }
+        #head_win{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            margin-left: 635px;
+            margin-top: 10px;
+          /*background-color: #e0ffeb;*/
+           background-size: cover;
+            border-radius: 50%;
+            animation: mymove1 20s infinite;
+        }
+        @-webkit-keyframes mymove1 {
+            50%{transform:rotate(30deg);}
+
+        }
+    </style>
+</head>
+<body >
+
+<div class="start_game_main" >
+    <h1 align="center" id="winner">胜利者</h1>
+    <div id="put_score"><h1>分数：<span id="grade_win">0</span></h1></div>
+    <div id="head_win"></div>
+    <div id="bottom" align="center"><h1><span id="again_game" onclick="again_()">重新开始</span>
+        &nbsp; &nbsp;  &nbsp;  &nbsp;          <span id="mode_chec" onclick="mode_page()">模式界面</span>
+        <!--        <span id="return_main_page" onclick="">主界面</span> </h1></div>-->
+    </h1>>
+</div>
+    <script>
+        onload=function () {
+            bgm_1();
+            var s=location.search;
+            var j=s.indexOf("person");   //截取模式的判断
+            var   person=s.substr(j+7,1);
+            var b=s.split("?");     //另一种查找方式
+            var grade=b[2].replace(/[^0-9]/ig,""); //用替换，消除s前面的非数字
+            var grade_=document.getElementById('grade_win');
+            grade_.innerHTML=grade;
+            // var person=b[1].replace(/[^0-9]/ig,""); //用替换，消除s前面的非数字
+            console.log(s);
+
+            if(person==1){
+                var winer=document.getElementById('head_win');
+                console.log("aaa");
+
+                winer.style.backgroundColor="#e0ffeb";
+                winer.style.backgroundImage="url('../img/snake/head_1.png')";
+            }
+            else if (person==2){
+                var winer=document.getElementById('head_win');
+
+                winer.style.backgroundColor="#e0ffeb";
+                winer.style.backgroundImage="url('../img/snake/head_mai.png')";
+            }
+            else if(person==3){
+                var winer=document.getElementById('winner');
+                winer.innerHTML="平局";
+
+            }
+            else{
+                winer.innerHTML="还未玩游戏，请开始游戏！"
+            }
+        }
+
+    </script>
+
+</body>
+</html>

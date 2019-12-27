@@ -16,7 +16,24 @@
     <script src="../jsp/deal_snake.js"></script>
     <script src="../jsp/mode/sports.js"></script>
     <script>
+        var audio=new Audio('../bgm/en_kana.mp3');
+        var aa=1;
+        function  bgm_(){
 
+
+            audio.play();
+            audio.loop=true;
+        }
+        function  music_() {
+
+            if (aa == 1) {
+                audio.pause();
+                aa = 0;
+            } else if (aa == 0) {
+                audio.play();
+                aa = 1;
+            }
+        }
     </script>
     <style>
         #map_b{
@@ -40,8 +57,25 @@
         }
 
     </style>
+    <style>
+        #stop_music{
+            width: 70px;
+            height: 70px;
+            border-width: 0;
+            background-color: #98fff0;
+            margin-left: 10px;
+            margin-top: 10px;
+            background-image:url("../img/button/999.jpeg");
+            background-size: cover;
+            border-radius: 50%;
+            animation: mymove 20s  infinite;
+        }
+        @-webkit-keyframes mymove {
+            50% {transform: rotate(360deg);}
+        }
+    </style>
 </head>
-<body>
+<body onload="bgm_()">
 
 <div class="start_game_main" >
 
@@ -76,6 +110,7 @@
 
     </div>
     <div class="start_temp_" style=""   ><img src="../img/button/start.png" width="150px" height="50px"  id="sports_a1" > </div>
+    <div id="stop_music" onclick="music_()"></div>
 
 </div>
 

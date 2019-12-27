@@ -20,8 +20,45 @@
     <script>
 
     </script>
+    <script>
+        var audio=new Audio('../bgm/bgm1.mp3');
+        var aa=1;
+        function  bgm_(){
+
+
+            audio.play();
+            audio.loop=true;
+        }
+        function  music_() {
+
+            if (aa == 1) {
+                audio.pause();
+                aa = 0;
+            } else if (aa == 0) {
+                audio.play();
+                aa = 1;
+            }
+        }
+    </script>
+    <style>
+        #stop_music{
+            width: 70px;
+            height: 70px;
+            border-width: 0;
+            background-color: #98fff0;
+            margin-left: 10px;
+            margin-top: 10px;
+            background-image:url("../img/button/a.jpg");
+            background-size: cover;
+            border-radius: 50%;
+            animation: mymove 20s  infinite;
+        }
+        @-webkit-keyframes mymove {
+            50% {transform: rotate(360deg);}
+        }
+    </style>
 </head>
-<body>
+<body onload="bgm_()">
 
 <div class="start_game_main" >
 <!--    地图底层/-->
@@ -56,6 +93,7 @@
 
 </div>
     <div class="start_temp_" id="a1"  style=""   onclick="fun1()"><img src="../img/button/start.png" width="150px" height="50px"> </div>
+    <div id="stop_music" onclick="music_()"></div>
    </div>
 
 <script>

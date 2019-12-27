@@ -16,7 +16,24 @@
     <script src="../jsp/deal_snake.js"></script>
     <script src="../jsp/mode/amusement.js"></script>
     <script>
+        var audio=new Audio('../bgm/mamo.mp3');
+        var aa=1;
+        function  bgm_(){
 
+
+            audio.play();
+            audio.loop=true;
+        }
+        function  music_() {
+
+            if (aa == 1) {
+                audio.pause();
+                aa = 0;
+            } else if (aa == 0) {
+                audio.play();
+                aa = 1;
+            }
+        }
     </script>
     <style>
 #map_b{
@@ -30,6 +47,23 @@
            opacity: 0;
        }
     </style>
+    <style>
+        #stop_music{
+            width: 70px;
+            height: 70px;
+            border-width: 0;
+            background-color: #98fff0;
+            margin-left: 10px;
+            margin-top: 10px;
+            background-image:url("../img/button/15.png");
+            background-size: cover;
+            border-radius: 50%;
+            animation: mymove 20s  infinite;
+        }
+        @-webkit-keyframes mymove {
+            50% {transform: rotate(360deg);}
+        }
+    </style>
 </head>
 <body onload="img_change()">
 <!--<embed src="'../bgm/start_bgm.mp3'" autostart=true hidden="true" loop=true>-->
@@ -37,7 +71,7 @@
 <!--</embed>-->
 
 
-<div class="start_game_main"   >
+<div class="start_game_main"    >
     <!--    地图底层/-->
     <div id="map_b">
     </div>
@@ -69,9 +103,13 @@
 
     </div>
     <div class="start_temp_" id="a1"  style=""   onclick="fun2()"><img src="../img/button/start.png" width="150px" height="50px"> </div>
+    <div id="stop_music" onclick="music_()"></div>
+
 
 </div>
-<iframe src="../file/music.html" style="width: 100px;height: 100px; border-width: 0px; position: absolute;left: 0;top:0px;"></iframe>
+
+
+
 <script>
 
 

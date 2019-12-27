@@ -3,13 +3,8 @@ var ting_cont=0;  //障碍物的数量
 var  temp_ting=0;
 
 var time_down;//倒计时
-function ting_position() {
 
 
-}
-function deal_ting() {
-
-}
 function start_snake2() {
 
     var map2 =document.getElementById('map');
@@ -45,11 +40,11 @@ function sport_s() {
     var a1=document.getElementById('sports_a1');
     a1.onclick=function () {
 start_a=0;
-console.log(start_a);
+
     }
     }
     if(start_a==0){
-        fun2();
+        fun3();
         start_a=1;
     }
     if(start_a==1){
@@ -66,7 +61,7 @@ console.log(start_a);
         }
     }
 }
-function fun2(){
+function fun3(){
     t=60;
 
 
@@ -74,10 +69,10 @@ function fun2(){
         put_time();
     },1000);
     judge_pause=3;
-console.log("aa");
+
     var start_game_1=document.getElementsByClassName('start_temp_')[0];
     start_game_1.parentNode.removeChild(start_game_1);
-    console.log("11");
+
     snake_deal_leight();
 
     drawsnake();

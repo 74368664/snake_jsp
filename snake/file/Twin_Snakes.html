@@ -1,0 +1,137 @@
+<!--
+竞技模式页面
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>snake</title>
+    <link rel="stylesheet" type="text/css" href="../css/start_game.css">
+
+    <script src="../jsp/g_info.js"></script>
+    <script src="../jsp/jquery-3.4.1.js"></script>
+    <script src="../jsp/main.js"></script>
+    <script src="../jsp/snake.js"></script>
+    <script src="../jsp/food.js"></script>
+    <script src="../jsp/deal_snake.js"></script>
+    <script src="../jsp/twin_snake.js"></script>
+    <script src="../jsp/mode/twin.js"></script>
+    <script>
+        var audio=new Audio('../bgm/en_kana.mp3');
+        var aa=1;
+        function  bgm_(){
+
+
+            audio.play();
+            audio.loop=true;
+        }
+        function  music_() {
+
+            if (aa == 1) {
+                audio.pause();
+                aa = 0;
+            } else if (aa == 0) {
+                audio.play();
+                aa = 1;
+            }
+        }
+    </script>
+    <style>
+        #map_b{
+            background-image: url("../img/bg/9233.jpg");
+opacity: 0.3;
+        }
+        #map{
+
+        }
+        #map_a{
+
+        }
+        .start_game_main{
+           /*background-image: url("../img/bg/7.jpg");*/
+            background-image: url("../img/bg/3.gif");
+            background-size: 20%;
+            background-repeat: no-repeat;
+background-color: #f0ffef;
+        }
+        .check_topic{
+            opacity: 0.5;
+            width: 400px;
+            margin-left: 260px;
+        }
+
+    </style>
+    <style>
+        #stop_music{
+            width: 70px;
+            height: 70px;
+            border-width: 0;
+            background-color: #98fff0;
+            margin-left: 10px;
+            margin-top: 10px;
+            background-image:url("../img/button/999.jpeg");
+            background-size: cover;
+            border-radius: 50%;
+            animation: mymove 20s  infinite;
+        }
+        @-webkit-keyframes mymove {
+            50% {transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body onload="bgm_()">
+
+<div class="start_game_main" >
+    <div class="check_topic"><h1 id="check_put" align="center">时间还剩：<span id="time1">2分0</span>秒</h1></div>
+    <!--    地图底层/-->
+    <div id="map_b">
+    </div>
+    <!--    更换背景层/-->
+    <div id="map_a">
+    </div>
+    <!--    游戏信息显示层-->
+    <div id="map"  >
+
+        <div class="leaderboard_">
+
+            <ol type="1">
+
+            </ol>
+        </div>
+        <div class="snake_head" style="height: 70px;width: 70px" ></div>
+        <div class="t_head" style="height: 70px;width: 70px;margin-left: 800px" ></div>
+        <div class="score_" style="margin-left: 70px;margin-top:-10px; opacity: 0.5">
+
+            <br/>
+            <span style="font-size: 30px">   分数：<span id="snake_score">  0</span></span>
+            <br/>
+            <br/>
+           </div>
+    <div class="score_" style="margin-left: 660px;margin-top:-10px; opacity: 0.5;position: absolute;">
+
+        <br/>
+        <span style="font-size: 30px">   分数：<span id="t_score">  0</span><span>
+            <br/>
+            <br/>
+   </div>
+
+    </div>
+        <!--    onmousedown="start_game()"-->
+<!--        <div class="check_topic"><h1 id="check_put" align="center">时间还剩：<span id="time1">60</span>秒</h1></div>-->
+
+
+
+    <div class="start_temp_" style=""   onclick="fun5()" ><img src="../img/button/start.png" width="150px" height="50px"  id="sports_a1" > </div>
+    <div id="stop_music" onclick="music_()"></div>
+
+</div>
+
+<script>
+
+
+
+
+</script>
+
+</body>
+</html>

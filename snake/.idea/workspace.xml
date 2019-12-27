@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -52,10 +52,18 @@
       <recent name="D:\code_progream\jsp\snake\jsp" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.twin_snake.js">
     <configuration name="start_game.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/snake/file/start_game.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="twin_snake.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/jsp/twin_snake.js" working-dir="$PROJECT_DIR$/jsp">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.twin_snake.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -91,7 +99,7 @@
       <workItem from="1577182600647" duration="16994000" />
       <workItem from="1577232424185" duration="54843000" />
       <workItem from="1577318322092" duration="46612000" />
-      <workItem from="1577403525929" duration="10617000" />
+      <workItem from="1577403525929" duration="41621000" />
     </task>
     <servers />
   </component>
@@ -99,77 +107,70 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577371208153">
+    <state x="517" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577416796452">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state x="517" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.737@0.0.1366.737" timestamp="1577371208153" />
-    <state width="1306" height="179" key="GridCell.Tab.0.bottom" timestamp="1577203100990">
+    <state x="517" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.737@0.0.1366.737" timestamp="1577416796452" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1577429469179">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.0.bottom/0.0.1366.737@0.0.1366.737" timestamp="1577203100990" />
-    <state width="1306" height="179" key="GridCell.Tab.0.center" timestamp="1577203100990">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.737@0.0.1366.737" timestamp="1577429469178" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1577429469178">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.0.center/0.0.1366.737@0.0.1366.737" timestamp="1577203100990" />
-    <state width="1306" height="179" key="GridCell.Tab.0.left" timestamp="1577203100989">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.737@0.0.1366.737" timestamp="1577429469178" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1577429469178">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.0.left/0.0.1366.737@0.0.1366.737" timestamp="1577203100989" />
-    <state width="1306" height="179" key="GridCell.Tab.0.right" timestamp="1577203100990">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.737@0.0.1366.737" timestamp="1577429469178" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1577429469178">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.0.right/0.0.1366.737@0.0.1366.737" timestamp="1577203100990" />
-    <state width="1306" height="179" key="GridCell.Tab.1.bottom" timestamp="1577203100991">
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.737@0.0.1366.737" timestamp="1577429469178" />
+    <state width="1323" height="2" key="GridCell.Tab.1.bottom" timestamp="1577429469180">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.1.bottom/0.0.1366.737@0.0.1366.737" timestamp="1577203100991" />
-    <state width="1306" height="179" key="GridCell.Tab.1.center" timestamp="1577203100990">
+    <state width="1323" height="2" key="GridCell.Tab.1.bottom/0.0.1366.737@0.0.1366.737" timestamp="1577429469180" />
+    <state width="1323" height="2" key="GridCell.Tab.1.center" timestamp="1577429469179">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.1.center/0.0.1366.737@0.0.1366.737" timestamp="1577203100990" />
-    <state width="1306" height="179" key="GridCell.Tab.1.left" timestamp="1577203100990">
+    <state width="1323" height="2" key="GridCell.Tab.1.center/0.0.1366.737@0.0.1366.737" timestamp="1577429469179" />
+    <state width="1323" height="2" key="GridCell.Tab.1.left" timestamp="1577429469179">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.1.left/0.0.1366.737@0.0.1366.737" timestamp="1577203100990" />
-    <state width="1306" height="179" key="GridCell.Tab.1.right" timestamp="1577203100990">
+    <state width="1323" height="2" key="GridCell.Tab.1.left/0.0.1366.737@0.0.1366.737" timestamp="1577429469179" />
+    <state width="1323" height="2" key="GridCell.Tab.1.right" timestamp="1577429469180">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="179" key="GridCell.Tab.1.right/0.0.1366.737@0.0.1366.737" timestamp="1577203100990" />
-    <state width="1306" height="235" key="GridCell.Tab.2.bottom" timestamp="1577203100977">
+    <state width="1323" height="2" key="GridCell.Tab.1.right/0.0.1366.737@0.0.1366.737" timestamp="1577429469180" />
+    <state width="1323" height="2" key="GridCell.Tab.2.bottom" timestamp="1577429469180">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="235" key="GridCell.Tab.2.bottom/0.0.1366.737@0.0.1366.737" timestamp="1577203100977" />
-    <state width="1306" height="235" key="GridCell.Tab.2.center" timestamp="1577203100977">
+    <state width="1323" height="2" key="GridCell.Tab.2.bottom/0.0.1366.737@0.0.1366.737" timestamp="1577429469180" />
+    <state width="1323" height="2" key="GridCell.Tab.2.center" timestamp="1577429469180">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="235" key="GridCell.Tab.2.center/0.0.1366.737@0.0.1366.737" timestamp="1577203100977" />
-    <state width="1306" height="235" key="GridCell.Tab.2.left" timestamp="1577203100976">
+    <state width="1323" height="2" key="GridCell.Tab.2.center/0.0.1366.737@0.0.1366.737" timestamp="1577429469180" />
+    <state width="1323" height="2" key="GridCell.Tab.2.left" timestamp="1577429469180">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="235" key="GridCell.Tab.2.left/0.0.1366.737@0.0.1366.737" timestamp="1577203100976" />
-    <state width="1306" height="235" key="GridCell.Tab.2.right" timestamp="1577203100977">
+    <state width="1323" height="2" key="GridCell.Tab.2.left/0.0.1366.737@0.0.1366.737" timestamp="1577429469180" />
+    <state width="1323" height="2" key="GridCell.Tab.2.right" timestamp="1577429469180">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1306" height="235" key="GridCell.Tab.2.right/0.0.1366.737@0.0.1366.737" timestamp="1577203100977" />
+    <state width="1323" height="2" key="GridCell.Tab.2.right/0.0.1366.737@0.0.1366.737" timestamp="1577429469180" />
     <state x="184" y="10" key="SettingsEditor" timestamp="1577001616933">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
     <state x="184" y="10" key="SettingsEditor/0.0.1366.737@0.0.1366.737" timestamp="1577001616933" />
-    <state x="234" y="104" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577187251382">
+    <state x="234" y="104" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577427791692">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state x="234" y="104" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.737@0.0.1366.737" timestamp="1577187251382" />
-    <state x="0" y="0" width="734" height="737" key="find.popup" timestamp="1577409790450">
+    <state x="234" y="104" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.737@0.0.1366.737" timestamp="1577427791692" />
+    <state x="0" y="0" width="734" height="737" key="find.popup" timestamp="1577448321538">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state x="0" y="0" width="734" height="737" key="find.popup/0.0.1366.737@0.0.1366.737" timestamp="1577409790450" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="JavascriptDebugType">
-        <watch expression="snake_leight" language="JavaScript" />
-      </configuration>
-    </watches-manager>
+    <state x="0" y="0" width="734" height="737" key="find.popup/0.0.1366.737@0.0.1366.737" timestamp="1577448321538" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/snake$start_game_html.dat" NAME="start_game.html Coverage Results" MODIFIED="1577186766068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
