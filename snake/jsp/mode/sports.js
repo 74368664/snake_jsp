@@ -4,9 +4,9 @@ var  temp_ting=0;
 
 var time_down;//倒计时
 
-
+//蛇移动，吃东西判断
 function start_snake2() {
-
+   judge_pause=3;
     var map2 =document.getElementById('map');
 
     map2.onmousedown=game_pause;
@@ -23,19 +23,20 @@ function start_snake2() {
     }
     deal_accelerate();//加速解压篇判断
     deal_decelerate();//减速毒药判断
-    deal_ting();
-    deal_bomb();
-    snake_died();
-    moveSnake();
+    deal_ting();      //判断是否撞墙
+    deal_bomb();      //是否撞到炸弹
+    snake_died();      
+    moveSnake();      //移动
     game_over();
     // var start_pause1=document.getElementsByClassName('over');
     // start_pause1.onclick=start_pause();
 }
-
+//间歇调用
  var time_s=setInterval(function(){
     sport_s();
 },time);
 function sport_s() {
+
     if(start_a==5){
     var a1=document.getElementById('sports_a1');
     a1.onclick=function () {
@@ -61,6 +62,7 @@ start_a=0;
         }
     }
 }
+//主函数
 function fun3(){
     t=60;
 
@@ -73,19 +75,19 @@ function fun3(){
     var start_game_1=document.getElementsByClassName('start_temp_')[0];
     start_game_1.parentNode.removeChild(start_game_1);
 
-    snake_deal_leight();
+    snake_deal_leight();  //初始蛇的长度
 
-    drawsnake();
-    food_position();
-    accelerate_position();
+    drawsnake();   //画出蛇
+    food_position();  //初始食物位置
+    accelerate_position(); 
     decelerate_position();
     bomb_position();
-    snake_died();
+    snake_died();    
     ting_position();
 
 
 }
-
+//限定时间
 function put_time() {
 
     var d = new Date();
@@ -94,7 +96,7 @@ function put_time() {
     --t;
     x.innerHTML=t;
     if(t==0){
-        game_over_page1();
+        game_over_page();
     }
 
 }
